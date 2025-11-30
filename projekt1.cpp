@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int factorial(int n) {
@@ -21,7 +20,19 @@ int main() {
         cout << "MENU" << endl;
         cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
         cout << "0. Wyjscie" << endl;
+        cout << "1. Oblicz silnie" << endl;   // ➕ ДОДАНО
+
         cin >> wyjscie;
+
+        // ➕ НОВА ЛОГІКА
+        if (wyjscie == 1) {
+            int x;
+            cout << "Podaj liczbe: ";
+            cin >> x;
+            cout << "Silnia = " << factorial(x) << endl;
+        }
+
     } while(wyjscie != 0);
+
     return 0;
 }
